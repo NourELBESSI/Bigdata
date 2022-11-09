@@ -1,0 +1,104 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 4rem;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+h3 {
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  left: 52%;
+  top: 32%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.c2 {
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  left: 52%;
+  top: 34%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.c3 {
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  left: 52%;
+  top: 37%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.container {
+  margin-top: 65px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
+.split.right {
+  right: 0;
+}
+.button {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  height: 2.5rem;
+  padding-top: 1.3rem;
+  width: 15rem;
+  text-align: center;
+  color: white;
+  border: white solid 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: translateX(-50%);
+}
+.button:hover {
+  background-color: red;
+  color: white;
+  border: transparent solid 0.2rem;
+}
+.container_astuce {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/astuce.jpg) no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  height: 100vh;
+}

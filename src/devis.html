@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Devis</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/Formulaire.css">
+
+    <script type="text/javascript">
+
+
+        function ValidateForm() {
+            var nom = document.getElementById("nom").value;
+            var prenom = document.getElementById("prenom").value;
+            var tel = document.getElementById("tel").value;
+            var numbers = /^[0-9]+$/;
+            var e = document.getElementById("type");
+            var type = e.value;
+            var x = document.getElementById("enfants");
+            var enfants = x.value;
+            var mois = document.getElementById("jour").value;
+            var mois = document.getElementById("mois").value;
+            var duree = document.getElementById("duree").value;
+            var s = document.getElementById("yourH1_element_Id");
+            if (nom == "") {
+                alert('veuillez saisir votre nom');
+            }
+            else if (nom == "") {
+                alert('veuillez saisir votre nom');
+            }
+            else if (!tel.match(numbers)) {
+                alert('Erreur! Votre numéro de téléphone ne peut contenir que des caractéres numériques.');
+            }
+
+
+            else if (type == "") {
+                alert('Veuillez entrer le type de voyage');
+            }
+
+
+            if (type == "Noces") {
+                if (document.getElementById('Belize').checked || document.getElementById('Chili').checked || document.getElementById('Mexique').checked || document.getElementById('Etats').checked) {
+
+                    if (mois.toUpperCase() == "JUIN" || mois.toUpperCase() == "JUILLET" || mois.toUpperCase() == "AOUT" || mois.toUpperCase() == "SEPTEMBRE") {
+                        if (duree < 1) { alert("Erreur"); }
+                        else if (duree < 15 || duree == 15) { alert("Votre voyage vous coûtera 6000dt"); }
+                        else if (duree > 16 && duree < 31) { alert("Votre voyage vous coûtera 10000dt"); }
+
+                    }
+                    else if (mois.toUpperCase() == "OCTOBRE" || mois.toUpperCase() == "NOVEMBRE" || mois.toUpperCase() == "DECEMBRE" || mois.toUpperCase() == "JANVIER" || mois.toUpperCase() == "FEVRIER" || mois.toUpperCase() == "MARS" || mois.toUpperCase() == "AVRIL" || mois.toUpperCase() == "MAI") {
+                        if (duree < 1) { alert("Erreur"); }
+                        else if (duree < 15 || duree == 15) { alert("Votre voyage vous coûtera 4000dt"); }
+                        else if (duree > 16 && duree < 31) { alert("Votre voyage vous coûtera 6000dt"); }
+                    }
+
+                }
+                else if (document.getElementById('Japon').checked || document.getElementById('Chine').checked) {
+                    if (mois.toUpperCase() == "JUIN" || mois.toUpperCase() == "JUILLET" || mois.toUpperCase() == "AOUT" || mois.toUpperCase() == "SEPTEMBRE") {
+                        if (duree < 1) { alert("Erreur"); }
+                        else if (duree < 15 || duree == 15) { alert("Votre voyage vous coûtera 12000dt"); }
+                        else if (duree > 16 && duree < 31) { alert("Votre voyage vous coûtera 15000dt"); }
+                    }
+                    else if (mois.toUpperCase() == "OCTOBRE" || mois.toUpperCase() == "NOVEMBRE" || mois.toUpperCase() == "DECEMBRE" || mois.toUpperCase() == "JANVIER" || mois.toUpperCase() == "FEVRIER" || mois.toUpperCase() == "MARS" || mois.toUpperCase() == "AVRIL" || mois.toUpperCase() == "MAI") {
+                        if (duree < 1) { alert("Erreur"); }
+                        else if (duree < 15 || duree == 15) { alert("Votre voyage vous coûtera 15000dt"); }
+                        else if (duree > 16 && duree < 31) { alert("Votre voyage vous coûtera 20000dt"); }
+                    }
+
+                }
+                else { alert("Veuillez choisir une destination.") }
+            }
+
+            if (type == "Professionnel") {
+                if (document.getElementById('Belize').checked || document.getElementById('Chili').checked || document.getElementById('Mexique').checked || document.getElementById('Etats').checked) {
+                    alert("Votre voyage vous coûtera 10000dt");
+                }
+                else if (document.getElementById('Japon').checked || document.getElementById('Chine').checked) {
+                    alert("Votre voyage vous coûtera 15000dt");
+                }
+                else { alert("Veuillez choisir une destination.") }
+            }
+
+
+            if (type == "Famille") {
+                if (document.getElementById('Belize').checked || document.getElementById('Chili').checked || document.getElementById('Mexique').checked || document.getElementById('Etats').checked) {
+                    if (mois.toUpperCase() == "JUIN" || mois.toUpperCase() == "JUILLET" || mois.toUpperCase() == "AOUT" || mois.toUpperCase() == "SEPTEMBRE") {
+                        if (duree < 1) { alert("Erreur"); }
+                        else if (duree < 15 || duree == 15) { if (enfants == "--") { alert("Veuillez entrer le nombre d'enfants que vous avez."); } else if (enfants == "1") { alert("Votre voyage vous coûtera 16000dt"); } else if (enfants == "2") { alert("Votre voyage vous coûtera 20000dt") } }
+                        else if (duree > 16 && duree < 31) { if (enfants == "--") { alert("Veuillez entrer le nombre d'enfants que vous avez."); } else if (enfants == "1") { alert("Votre voyage vous coûtera 20000dt"); } else if (enfants == "2") { alert("Votre voyage vous coûtera 22000dt") } }
+                    }
+
+                    else if (mois.toUpperCase() == "OCTOBRE" || mois.toUpperCase() == "NOVEMBRE" || mois.toUpperCase() == "DECEMBRE" || mois.toUpperCase() == "JANVIER" || mois.toUpperCase() == "FEVRIER" || mois.toUpperCase() == "MARS" || mois.toUpperCase() == "AVRIL" || mois.toUpperCase() == "MAI") {
+                        if (duree < 1) { alert("Erreur"); }
+                        else if (duree < 15 || duree == 15) { if (enfants == "--") { alert("Veuillez entrer le nombre d'enfants que vous avez."); } else if (enfants == "1") { alert("Votre voyage vous coûtera 20000dt"); } else if (enfants == "2") { alert("Votre voyage vous coûtera 22000dt") } }
+                        else if (duree > 16 && duree < 31) { if (enfants == "--") { alert("Veuillez entrer le nombre d'enfants que vous avez."); } else if (enfants == "1") { alert("Votre voyage vous coûtera 25000dt"); } else if (enfants == "2") { alert("Votre voyage vous coûtera 30000dt") } }
+                    }
+                }
+                else if (document.getElementById('Japon').checked || document.getElementById('Chine').checked) {
+                    if (duree < 1) { alert("Erreur"); }
+                    else if (duree < 15 || duree == 15) { if (enfants == "--") { alert("Veuillez entrer le nombre d'enfants que vous avez."); } else if (enfants == "1") { alert("Votre voyage vous coûtera 8000dt"); } else if (enfants == "2") { alert("Votre voyage vous coûtera 9500dt") } }
+                    else if (duree > 16 && duree < 31) { if (enfants == "--") { alert("Veuillez entrer le nombre d'enfants que vous avez."); } else if (enfants == "1") { alert("Votre voyage vous coûtera 12000dt"); } else if (enfants == "2") { alert("Votre voyage vous coûtera 14000dt") } }
+                }
+                else if (mois.toUpperCase() == "OCTOBRE" || mois.toUpperCase() == "NOVEMBRE" || mois.toUpperCase() == "DECEMBRE" || mois.toUpperCase() == "JANVIER" || mois.toUpperCase() == "FEVRIER" || mois.toUpperCase() == "MARS" || mois.toUpperCase() == "AVRIL" || mois.toUpperCase() == "MAI") {
+                    if (duree < 1) { alert("Erreur"); }
+                    else if (duree < 15 || duree == 15) { if (enfants == "--") { alert("Veuillez entrer le nombre d'enfants que vous avez."); } else if (enfants == "1") { alert("Votre voyage vous coûtera 5000dt"); } else if (enfants == "2") { alert("Votre voyage vous coûtera 6500dt") } }
+                    else if (duree > 16 && duree < 31) { if (enfants == "--") { alert("Veuillez entrer le nombre d'enfants que vous avez."); } else if (enfants == "1") { alert("Votre voyage vous coûtera 8000dt"); } else if (enfants == "2") { alert("Votre voyage vous coûtera 9000dt") } }
+                }
+
+                else { alert("Veuillez choisir une destination.") }
+            }
+
+        }
+
+    </script>
+
+
+</head>
+
+
+<body>
+    <div class="wrapper_form">
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="carnet.html">Carnet de voyage</a></li>
+                <li><a href="astuces.html">Astuces</a></li>
+                <li><a class="active" href="devis.html">Devis</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="wrapper">
+                <div class="title">
+                    Votre Devis
+                </div>
+                <form class="form">
+                    <div class="inputfield">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" class="input" name="prenom" id="prenom">
+                    </div>
+                    <div class="inputfield">
+                        <label for="nom">Nom</label>
+                        <input type="text" class="input" name="nom" id="nom">
+                    </div>
+                    <div class="inputfield">
+                        <label for="email">Adresse Email</label>
+                        <input type="email" class="input" name="email" id="email">
+                    </div>
+                    <div class="inputfield">
+                        <label for="tel">Numéro de téléphone</label>
+                        <input type="text" class="input" name="tel" id="tel">
+                    </div>
+
+                    <div class="inputfield">
+                        <label>Type de Voyage</label>
+                        <div class="custom_select">
+                            <select id="type">
+                                <option value="">Select</option>
+                                <option value="Noces">Noces</option>
+                                <option value="Famille">Famille</option>
+                                <option value="Professionnel">Professionnel</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="inputfield">
+                        <label>Nombre d'enfants</label>
+                        <div class="custom_select">
+                            <select id="enfants">
+                                <option value="--">--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="inputfield">
+                        <div class="check">
+                            <input type="radio" name="check" id="Belize">
+                            <label for="Belize">Belize</label>
+                            <input type="radio" name="check" id="Chine" value="Chine">
+                            <label for="Belize">Chine</label>
+
+                            <input type="radio" name="check" id="Chili">
+                            <label for="Chili">Chili</label>
+
+
+                            <input type="radio" name="check" id="Mexique">
+                            <label for="Mexique">Mexique</label>
+
+                            <input type="radio" name="check" id="Etats">
+                            <label for="Etats">Etats Unis</label>
+
+                            <input type="radio" name="check" id="Japon">
+                            <label for="Japon">Japon</label>
+                        </div>
+                    </div>
+
+
+                    <div class="inputfield">
+                        <label>Date du départ</label>
+                        <input class="date" type="text" class="input" name="prenom" id="jour" placeholder="dd">
+                        <input class="date" type="text" class="input" name="prenom" id="mois" placeholder="mm">
+                        <input class="date" type="text" class="input" name="prenom" id="annee" placeholder="aaaa">
+                    </div>
+                    <div class="inputfield">
+                        <label for="tel">Durée du séjour</label>
+                        <input type="text" class="input" name="duree" id="duree">
+                    </div>
+
+                    <div class="inputfield">
+                        <label>Des préférences</label>
+                        <textarea name="pref" id="pref" class="textarea"></textarea>
+                    </div>
+                    <div class="inputfield">
+                        <input type="submit" value="Soumettre" class="btn" onclick="ValidateForm()">
+                    </div>
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+/*fieldset {
+  background-color: pink;
+  border-style: solid;
+  border-color: black;
+  margin-right: 0px;
+  margin: 0 auto;
+  width: 700px;
+}
+form {
+  margin-top: 90px;
+}
+*/
+
+.wrapper_form {
+  background: url(../images/devis.jpg);
+  background-position: center center;
+
+  background-size: cover;
+  background-color: #464646;
+  height: 115vh;
+}
+.container {
+  padding: 85px;
+  /* margin-top: 120px;*/
+  /* max-height: 250px;*/
+  /*max-width: 500px;*/
+  /*margin: 0 auto;
+  padding: 20px;*/
+}
+.wrapper {
+  max-width: 500px;
+  width: 100%;
+  height: 600px;
+  background: #fff;
+  margin: 20px auto;
+  /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+  padding: 30px;*/
+
+  box-shadow: 0px 0px 20px #00000010;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.wrapper .title {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 20px;
+  margin-bottom: 25px;
+  color: red;
+  text-transform: uppercase;
+  text-align: center;
+}
+.wrapper .form .subtitle {
+  font-size: 16px;
+  /* font-weight: 700;*/
+  margin-bottom: 50px;
+  color: #757575;
+
+  text-align: justify;
+}
+
+.wrapper .form {
+  width: 100%;
+}
+
+.wrapper .form .inputfield {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield .check {
+  margin-top: 25px;
+  margin-top: 25px;
+  margin-left: 50px;
+}
+
+.wrapper .form .inputfield label {
+  width: 250px;
+  color: #757575;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .inputfield .date {
+  width: 50px;
+  color: #757575;
+  margin-right: 10px;
+  font-size: 14.5px;
+}
+
+.wrapper .form .inputfield .btn {
+  width: 80%;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 0px;
+  background: red;
+  margin-left: 50px;
+  margin-top: 45px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+.wrapper .form .inputfield .btn:hover {
+  background: red;
+}

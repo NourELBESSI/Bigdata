@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ContactStyle.css">
+
+</head>
+<script type="text/javascript">
+    function ValidateForm() {
+        var nom = document.getElementById("name").value;
+
+        var tel = document.getElementById("phone").value;
+        var numbers = /^[0-9]+$/;
+
+
+
+        if (nom == "") {
+            alert("Veuillez saisir votre nom d'utlilisateur");
+        }
+        else if (tel == "") {
+            alert('Veuillez svp saisir votre numéro de téléphone.');
+        }
+        else if (!tel.match(numbers)) {
+            alert('Erreur! Votre numéro de téléphone ne peut contenir que des caractéres numériques.');
+        }
+        else {
+            alert('Merci pour votre retours. On vous répondra dans les 24h');
+        }
+    }
+
+</script>
+
+<body>
+
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="carnet.html">Carnet de voyage</a></li>
+                <li><a href="astuces.html">Astuces</a></li>
+                <li><a href="devis.html">Devis</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container1">
+            <div class="container">
+
+
+                <div class="form">
+                    <div class="contact-info">
+                        <h3 class="title">Dites nous ce que vous pensez de votre expérience!</h3>
+                        <p class="text">
+                            Si vous avez voyager avec nous, n'hesitez pas à nous envoyer votre avis et si ceci est votre
+                            premère expérience, posez nous des questions!
+                        </p>
+                        <br />
+                        <br />
+                        <div class="info">
+                            <div class="information">
+                                <img src="../images/contact/placeholder.png" class="icon" alt="" />
+                                <p>TravelPassion, Les Berges du Lac, Tunis</p>
+                            </div>
+                            <div class="information">
+                                <img src="../images/contact/email.png" class="icon" alt="" />
+                                <p>TravelPassion@gmail.com</p>
+                            </div>
+                            <div class="information">
+                                <img src="../images/contact/phone.png" class="icon" alt="" />
+                                <p>(+ 216) 58 549 777</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="contact-form">
+                        <span class="circle one"></span>
+                        <span class="circle two"></span>
+
+                        <form autocomplete="off">
+                            <h3 class="title">Contactez-Nous</h3>
+                            <div class="inputContainer">
+                                <input type="text" id="name" name="name" class="input"
+                                    placeholder="Nom d'utilisateur" />
+
+                            </div>
+                            <div class="inputContainer">
+                                <input type="email" name="email" class="input" placeholder="Email" />
+
+                                <span>Email</span>
+                            </div>
+                            <div class="inputContainer">
+                                <input type="tel" id="phone" name="phone" class="input"
+                                    placeholder="Numéro de téléphone" />
+                                <span>Phone</span>
+                            </div>
+                            <div class="inputContainer textarea">
+                                <textarea name="message" class="input" placeholder="Message"></textarea>
+                                <span>Message</span>
+                            </div>
+                            <input type="submit" value="Envoyer" class="btn" onclick="ValidateForm()" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+
+</html>
